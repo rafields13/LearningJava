@@ -15,6 +15,9 @@ public class TelaCalc extends javax.swing.JFrame {
      */
     public TelaCalc() {
         initComponents();
+        
+        // Removendo a visao do Painel da Tela:
+        panCalc.setVisible(false);
     }
 
     /**
@@ -26,21 +29,185 @@ public class TelaCalc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        txtNum = new javax.swing.JSpinner();
+        btnCalc = new javax.swing.JButton();
+        panCalc = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblResto = new javax.swing.JLabel();
+        lblCubo = new javax.swing.JLabel();
+        lblRaizQ = new javax.swing.JLabel();
+        lblRaizC = new javax.swing.JLabel();
+        lblAbs = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Informe um valor:");
+
+        txtNum.setModel(new javax.swing.SpinnerNumberModel(1, -50, 50, 1));
+
+        btnCalc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCalc.setForeground(new java.awt.Color(255, 51, 51));
+        btnCalc.setText("Calcular");
+        btnCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Resto da Divisao por 2");
+
+        jLabel3.setText("Elevado ao Cubo");
+
+        jLabel4.setText("Raiz Quadrada");
+
+        jLabel5.setText("Raiz Cubica");
+
+        jLabel6.setText("Valor absoluto");
+
+        lblResto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblResto.setForeground(new java.awt.Color(0, 0, 255));
+        lblResto.setText("0");
+
+        lblCubo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCubo.setForeground(new java.awt.Color(0, 0, 255));
+        lblCubo.setText("0");
+
+        lblRaizQ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblRaizQ.setForeground(new java.awt.Color(0, 0, 255));
+        lblRaizQ.setText("0");
+
+        lblRaizC.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblRaizC.setForeground(new java.awt.Color(0, 0, 255));
+        lblRaizC.setText("0");
+
+        lblAbs.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbs.setForeground(new java.awt.Color(0, 0, 255));
+        lblAbs.setText("0");
+
+        javax.swing.GroupLayout panCalcLayout = new javax.swing.GroupLayout(panCalc);
+        panCalc.setLayout(panCalcLayout);
+        panCalcLayout.setHorizontalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblResto)
+                        .addComponent(lblCubo)
+                        .addComponent(lblRaizQ))
+                    .addComponent(lblRaizC, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblAbs, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(56, 56, 56))
+        );
+        panCalcLayout.setVerticalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(lblResto))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lblCubo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lblRaizQ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lblRaizC))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(lblAbs))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(203, 203, 203)
+                                .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(62, 62, 62)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(111, 111, 111)
+                                .addComponent(btnCalc)))
+                        .addGap(0, 57, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addComponent(btnCalc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
+        // Pegando o numero:
+        int n = Integer.parseInt(txtNum.getValue().toString());
+        
+        // Resto da Divisao por 2:
+        int r = n % 2;
+        lblResto.setText(Integer.toString(r));
+        
+        // Elevado ao Cubo:
+        double c = Math.pow(n, 3);
+        lblCubo.setText(Double.toString(c));
+        
+        // Raiz Quadrada:
+        // double raizC = Math.pow(n, 1/2); ou
+        double raizQ = Math.sqrt(n);
+        lblRaizQ.setText(String.format("%.1f", raizQ));
+        
+        // Raiz Cubica:
+        // double raizC = Math.pow(n, 1/9); ou
+        double raizC = Math.cbrt(n);
+        lblRaizC.setText(String.format("%.1f", raizC));
+        
+        // Valor Absoluto:
+        int abs = Math.abs(n);
+        lblAbs.setText(Integer.toString(abs));
+        
+        // Mostrando o Painel na Tela:
+        panCalc.setVisible(true);
+    }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +245,19 @@ public class TelaCalc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalc;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lblAbs;
+    private javax.swing.JLabel lblCubo;
+    private javax.swing.JLabel lblRaizC;
+    private javax.swing.JLabel lblRaizQ;
+    private javax.swing.JLabel lblResto;
+    private javax.swing.JPanel panCalc;
+    private javax.swing.JSpinner txtNum;
     // End of variables declaration//GEN-END:variables
 }
